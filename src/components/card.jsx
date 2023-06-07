@@ -19,7 +19,7 @@ function Card(props){
             </div>
             <div className="genre">
             {props.genres.map((gen)=>(
-                <h3>{gen}</h3>   
+                <h4>{gen}</h4>   
             ))}
             </div> 
             </div>
