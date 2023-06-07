@@ -1,0 +1,11 @@
+.navbar{
+    background-color: rgb(227, 178, 52);
+    display: flex;
+    padding-left: 10px;
+    color: white;  
+    align-items: center; 
+    margin-bottom: 2rem;
+}
+.navbar h1{
+    color: whitesmoke;
+}
