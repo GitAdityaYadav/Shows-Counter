@@ -2,7 +2,7 @@ import "./contentStyles.css";
 import React, {useEffect,useState} from "react";
 import Card from "./card";
 function Content(){
-
+  
     const [shows,setShows]=useState([]);
     let API="https://api.tvmaze.com/search/shows?q=all";
     
@@ -25,10 +25,10 @@ function Content(){
         <h1>Top Picks For You</h1>
           <div className="show-Container">
           {shows.map((list,index)=>(
-             <div>
+            <div>
                <Card
                 key={index}
-                imgSrc={list.show.image.medium}
+                imgSrc={list.show.image?list.show.image.medium:"https://m.media-amazon.com/images/M/MV5BMjI0NDE2OTA4Ml5BMl5BanBnXkFtZTcwODU5NzQzOQ@@._V1_.jpg"}
                 rating={list.show.rating.average}
                 title={list.show.name}
                 genres={list.show.genres}
@@ -37,6 +37,7 @@ function Content(){
              </div>
           )
          )}
+         
           </div>
         </div>
     );
